@@ -71,3 +71,37 @@ img {
 .clear {
   clear: both;
 }
+
+@media screen and (max-width:420px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* larghezza dei container settata a 100% */
+  .container,
+  .container.grey {
+    width: 100%;
+  }
+  /* larghezza della riga sovrascritta con margin top in base alla viewport */
+  .row {     
+    width: 100%;
+    margin: 5vh auto;
+  }
+  /* rimozione del layout "float" */
+  .row>div {
+    clear: both;
+    display: block;
+  }
+  
+  #lezioni .row>.left, 
+  #lezioni .row>.right {
+    clear: both;
+    width: 100%;
+  }
+  
+  .row img {
+    width: 25%;
+    object-fit: contain;
+  }
+}
