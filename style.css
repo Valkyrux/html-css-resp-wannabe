@@ -73,7 +73,11 @@ img {
 }
 
 @media screen and (max-width:420px) {
-  body {
+  :root {
+    --beije: rgb(242, 242, 205);
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -86,12 +90,14 @@ img {
   /* larghezza della riga sovrascritta con margin top in base alla viewport */
   .row {     
     width: 100%;
-    margin: 5vh auto;
+    margin: 0 auto;
   }
   /* rimozione del layout "float" */
   .row>div {
     clear: both;
     display: block;
+    padding: 2vh 3% 1vh;
+    font-size: 0.72em;
   }
   
   #lezioni .row>.left, 
@@ -99,9 +105,50 @@ img {
     clear: both;
     width: 100%;
   }
+
+  #steps .row>.left, 
+  #steps .row>.central, 
+  #steps .row>.right {
+    clear: both;
+    width: 100%;
+  }
+  /* h1 */
+  h1 {
+    padding: 1.6vh 0 0;
+    font-size: 1.5rem;
+  }
   
+  
+  /* img */
   .row img {
-    width: 25%;
+    width: 22%;
+    height: auto;
     object-fit: contain;
+  }
+ 
+  #lezioni .row .right img {
+    width: 38%;
+  }
+  
+  #why .row img {
+    padding: 5%;
+  }
+  hr {
+    border-top: 1px solid gray;
+  }
+  /* background-colors */
+  #lezioni,
+  #why {
+    background-color: var(--beije);
+  }
+  #steps {
+    background-color: white;
+  }
+  /* why margin-settings */
+  #why .row>.first, 
+  #why .row>.second, 
+  #why .row>.third {
+    width: 100%;
+    margin-top: 1.5vh;
   }
 }
