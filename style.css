@@ -87,6 +87,7 @@ img {
   .row {     
     width: 100%;
     margin: 0 auto;
+    font-size: 0.9em;
   }
 
   #steps .row,
@@ -96,28 +97,27 @@ img {
     justify-content: space-around;
     align-content: center;
   }
- 
-  #steps .row>.left, 
-  #steps .row>.central, 
-  #steps .row>.right {
-    clear: both;
-    width: 100%;
-  }
   /* h1 */
   h1 {
     padding: 1.6vh 2% 0;
     font-size: 1.5rem;
   }
+  
+  #steps h1,
+  #why h1 {
+    text-align: left;
+  }
   /* img */
   .row img {
-    width: 18%;
-    height: 9vh;
+    height: 6vh;
     object-fit: contain;
+    margin-top: 2vh;
   }
  
   #why .row img {
     padding: 5%;
   }
+  /* hr trasparente */
   hr {
     border-top: 0px solid transparent;
   }
@@ -135,12 +135,15 @@ img {
   #steps {
     background-color: white;
   }
-  /* why margin-settings */
-  #why .row>.first, 
-  #why .row>.second, 
-  #why .row>.third {
-    width: 100%;
-    margin-top: 1.5vh;
+
+  #steps .row>div {
+    margin-top: 5vh;
+  }
+  
+  #why .row>div.first, 
+  #why .row>div.second, 
+  #why .row>div.third {
+    margin-top: 3vh;
   }
 }
 
